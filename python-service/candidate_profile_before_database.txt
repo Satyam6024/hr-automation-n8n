@@ -1,0 +1,254 @@
+CANDIDATE PROFILE
+=================
+
+IDENTITY
+--------
+Name: Satyam Shivam Sahu
+Location: Bengaluru, India
+Email: heysatyamsahu@gmail.com
+Phone: +91 8792323132
+LinkedIn: https://www.linkedin.com/in/heysatyamsahu
+GitHub: https://github.com/Satyam6024
+
+
+CURRENT PROFESSIONAL ROLE
+-------------------------
+Company: Appsource Service Pvt Ltd
+Location: Bengaluru, India
+Period: November 2024 – Present
+Role: Python Developer
+
+
+PROFESSIONAL EXPERIENCE
+-----------------------
+
+1. Enterprise Document Intelligence Platform
+
+- Developed an end-to-end document intelligence platform using FastAPI and LangGraph.
+- Prevented cross-tenant data leakage at the query layer using strict PostgreSQL domain isolation.
+- Designed a hybrid vector and Reciprocal Rank Fusion (RRF) search pipeline using PostgreSQL pgvector.
+- Delivered sub-second semantic retrieval across enterprise document repositories.
+- Integrated an inline Grader Node firewall into LangGraph execution workflows to sanitize user prompts before LLM inference.
+- Used PostgreSQL Row-Level Security (RLS) to enforce tenant data boundaries.
+- Built automated document ingestion using PyMuPDF and Hugging Face sentence embeddings.
+- Reduced document indexing turnaround time to under 3 seconds per file.
+- Used localized Llama 3.1 8B inference directly inside private infrastructure for zero data egress.
+- Secured external HTTP data connectors against Server-Side Request Forgery (SSRF) vulnerabilities.
+
+
+2. Distributed Data Processing and Reliability
+
+- Scaled an end-to-end data pipeline to handle 21,000 records/sec.
+- Built automated failure-injection tests to simulate message broker crashes and validate fault tolerance.
+- Built a Celery execution engine with distributed batch fencing and a transactional outbox.
+- Ensured idempotent writes and at-least-once task delivery during worker outages.
+- Developed an extensible Python connector framework for third-party REST API integrations.
+- Implemented exponential backoff and retry logic to handle provider rate limits.
+
+
+TECHNICAL SKILLS
+----------------
+
+Programming Languages:
+- Python
+- SQL
+- C
+- C++
+- Bash
+
+AI / LLM / Agentic Systems:
+- LangGraph
+- LangChain
+- MCP (Model Context Protocol)
+- Prompt Defense
+- LLM Guardrails
+- Sentence Embeddings
+- LangSmith
+
+Backend / Software Engineering:
+- FastAPI
+- SQLAlchemy
+- Celery
+- Alembic
+- Tenacity
+- Pytest
+- Pydantic
+- REST APIs
+- ETL
+
+LLM Fine-Tuning / Alignment:
+- Group Relative Policy Optimization (GRPO)
+- Direct Preference Optimization (DPO)
+- Odds Ratio Preference Optimization (ORPO)
+
+Databases / Infrastructure:
+- PostgreSQL
+- pgvector
+- PostgreSQL Row-Level Security (RLS)
+- Redis
+- MongoDB
+
+Cloud / DevOps:
+- AWS EC2
+- AWS S3
+- AWS RDS
+- AWS Lambda
+- Docker
+- GitHub Actions
+- CI/CD
+
+
+LLM FINE-TUNING EXPERIENCE
+--------------------------
+
+1. GRPO
+
+- Fine-tuned SmolLM-135M using TRL's GRPOTrainer and LoRA.
+- LoRA configuration: r=8, alpha=16.
+- Used group-sampled baselines across 4 generations per prompt.
+- Used deterministic reward functions for factual correctness using token overlap and SequenceMatcher.
+- Reward design also considered structural clarity and conversational helpfulness.
+
+
+2. DPO
+
+- Performed alignment of Qwen 2.5 (0.5B) using 4-bit QLoRA with NF4 double quantization.
+- LoRA configuration: r=16, alpha=32.
+- Used TRL's DPOTrainer and sigmoid loss.
+- Beta parameter: 0.1.
+- Converted preference pairs into chat templates.
+- Achieved an evaluation reward margin of +1.21.
+- Training was performed without out-of-memory errors on commodity GPU hardware.
+
+
+3. ORPO
+
+- Fine-tuned Qwen2 (0.5B) on UltraFeedback preference data.
+- Used TRL's ORPOTrainer.
+- Used bfloat16 mixed precision.
+- LoRA configuration: r=8, alpha=16.
+- Used gradient checkpointing.
+- Used sub-512-token context windows.
+- Used monolithic instruction-tuning and alignment without a reference model.
+
+
+PROJECTS
+--------
+
+TRIPMATE AI
+-----------
+Technology:
+Python, LangGraph, FastAPI, Streamlit, PostgreSQL, FastMCP, LangSmith
+
+Description:
+- Built an end-to-end multi-agent travel planner.
+- Orchestrated specialized Flight, Hotel, Weather, Budget, and Itinerary agents using LangGraph.
+- Managed complex parallel workflows.
+- Implemented state persistence and checkpointing using a remote PostgreSQL database hosted on Render.
+
+Supervisor Architecture:
+- Implemented an LLM-driven Supervisor Agent using Llama 3.3 via Groq.
+- Supervisor dynamically evaluates user intent.
+- Supervisor triggers only the specialized agents required for a query.
+- Reduced redundant sequential operations and optimized API and LLM token costs.
+
+MCP Architecture:
+- Replaced hardcoded API endpoints with a standardized Model Context Protocol (MCP) layer.
+- Integrated remote Tavly, local Aviation Stack, and custom OpenWeather MCP servers.
+- Decoupled agent logic from third-party API schemas.
+- Designed the architecture to remain resilient to downstream API migrations and updates.
+
+Guardrails:
+- Built a model-based guardrail system at the ingestion layer using Llama 3.3.
+- Analyzed user prompts for safety and domain relevance.
+- Blocked harmful, malicious, or out-of-scope requests before triggering agent workflows.
+
+Human-in-the-Loop:
+- Implemented HITL workflows using LangGraph state interruption and command features.
+- Allowed users to review draft itineraries.
+- Allowed users to submit modification feedback.
+- Allowed users to approve revisions before final travel-plan generation.
+
+
+EDUCATION
+---------
+University: O.P. Jindal University
+Degree: Bachelor of Technology in Computer Science and Engineering
+Period: 2019 – 2023
+
+
+CERTIFICATIONS
+--------------
+
+- Oracle Cloud Infrastructure Certified Architect Associate
+- Oracle Agentic AI Certified Associate
+- Software Engineer Certificate - HackerRank
+- SQL (Advanced) Certificate - HackerRank
+- ML, DL and Data Science with Python
+- Walmart USA Advanced Software Engineering
+- Deloitte Australia Technology
+
+
+CANDIDATE-COMPANY MATCHING GUIDELINES
+-------------------------------------
+
+Use this profile as the factual source for evaluating companies against the candidate.
+
+Strong evidence of candidate capability includes:
+
+- Python backend development
+- FastAPI and REST API development
+- LangGraph and LangChain
+- Multi-agent systems
+- LLM applications
+- MCP-based architectures
+- LLM guardrails and prompt defense
+- RAG and semantic retrieval
+- PostgreSQL, pgvector and RLS
+- Distributed systems and Celery
+- ETL and external API integrations
+- AWS and Docker
+- CI/CD with GitHub Actions
+- LLM fine-tuning and alignment
+- GRPO
+- DPO
+- ORPO
+- LoRA / QLoRA
+- Llama models
+- Qwen models
+- Sentence embeddings
+- Pytest and backend reliability engineering
+
+When evaluating a company:
+
+1. Identify whether the company actually works in areas relevant to the candidate's documented experience.
+2. Identify specific technologies, products, services, or engineering areas from the company's public website that overlap with this profile.
+3. Identify plausible role categories based on the company's actual work.
+4. Explain the candidate-company fit using concrete overlap.
+5. Do not claim that the company is hiring unless current evidence confirms an opening.
+6. Do not invent job titles, technologies, products, clients, projects, achievements, or responsibilities.
+7. Do not claim the candidate has experience with technologies that are not listed in this profile.
+8. Do not infer employment history that is not listed above.
+9. If the company's public information is insufficient, explicitly state that the match cannot be confidently determined.
+10. Prefer factual evidence over generic statements.
+
+EMAIL PERSONALIZATION RULES
+---------------------------
+
+When generating an outreach email:
+
+- Use the candidate's documented experience above.
+- Personalize the email using specific factual information about the company.
+- Mention one concrete reason the company is relevant to the candidate.
+- Connect that reason to one or two documented candidate capabilities.
+- Do not invent an open position.
+- Do not claim that the recruiter is responsible for a specific team unless that is known.
+- Do not claim previous contact with the recruiter.
+- Do not exaggerate the candidate's experience.
+- Keep the email professional and concise.
+- Target approximately 100-140 words.
+- Request a 5-10 minute call to walk through relevant projects.
+- Mention that the resume is available for review.
+- Avoid generic phrases such as "I hope this email finds you well."
+- Avoid excessive praise.
+- Make every email meaningfully different based on the company and recipient.

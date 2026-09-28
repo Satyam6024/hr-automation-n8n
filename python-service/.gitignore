@@ -1,0 +1,8 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+hr_research.db
+hr_research.db-shm
+hr_research.db-wal
